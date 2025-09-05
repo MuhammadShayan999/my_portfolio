@@ -1,0 +1,483 @@
+/* ---------------- RESET ---------------- */
+* {
+  margin-bottom: 0%;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+/* ---------------- BASE STYLES ---------------- */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+  font-size: larger;
+  padding-top: 100px; /* to prevent content being hidden behind fixed header */
+}
+
+.container {
+  width: 100%;
+  margin: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* ---------------- HEADER ---------------- */
+header {
+  background: #222;
+  color: #fff;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items:center;
+  padding: 20px px;
+  position:fixed;
+  z-index: 100;
+  top: 0;
+  
+}
+
+header h1{
+  margin: 0%;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  margin-right: auto;
+}
+
+/* NAVIGATION */
+header nav ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;  /* allows wrapping neatly on very small screens */
+  gap: 2rem; /* space between links */
+  list-style: none;
+  text-decoration: none;
+  margin-bottom: -22px; /* Adjusts the vertical alignment */
+  padding: 0;
+}
+
+header nav li {
+  display: flex;
+  flex-direction: row;
+  margin-top: 22px
+}
+
+header nav a.active {
+  color: #f0c040;
+  border-bottom: 2px solid #f0c040;
+}
+
+header nav a {
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+header nav a:hover {
+  color: #f0c040;
+}
+
+/* Dark Mode Toggle Button */
+#darkToggle {
+  font-size: 12px;
+  font-weight: bold;
+  background: transparent;
+  border: 2px solid #f0c040;
+  color: #f0c040;
+  border-radius: 4px;
+  padding: 2px 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#darkToggle:hover {
+  background: #f0c040;
+  color: #000;
+  
+}
+
+/* ---------------- HERO ---------------- */
+.hero {
+  background: #444;
+  color: #fff;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.hero span {
+  color: #f0c040;
+}
+
+/* ---------------- SECTION ---------------- */
+.section {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+/* ---------------- PROJECTS ---------------- */
+.projects {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+  /*---------------- CARDS - STYLING ---------------*/
+
+.card-container{
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: center;
+gap: 20px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  width: 280px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* ---------------- SKILLS ---------------- */
+.skills {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.skills li {
+  background: #f0c040;
+  color: #000;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+/* ---------------- CONTACT ---------------- */
+
+form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column; 
+  gap: 15px;
+}
+
+
+form input,
+form textarea {
+  padding: 10px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  resize: vertical;
+}
+
+/* -----------HOVER-EFFECT---------- */
+form input:focus,
+form textarea:focus {
+  border-color: #f0c040;
+  outline: none;
+}
+
+
+form button {
+  cursor: pointer;
+  padding: 10px;
+  background: #f0c040;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+form button:hover {
+  background: #e0b030;
+}
+
+/* ---------------- FOOTER ---------------- */
+footer {
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 20px 10px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.footer-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.footer-container p {
+  margin-bottom: 10px;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.social-icons a {
+  color: #fff;
+  margin: 0 10px;
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #f0c040;
+}
+
+/* ---------------- DARK MODE ---------------- */
+body.dark-mode {
+  background-color: #111;
+  color: #ddd;
+}
+
+body.dark-mode header {
+  background: #000;
+}
+
+body.dark-mode .hero {
+  background: #222;
+  color: #f0c040;
+}
+
+body.dark-mode .card {
+  background: #1a1a1a;
+  color: #f0c040;
+  border: 1px solid #333;
+}
+
+body.dark-mode .btn {
+  background-color: #444;
+  color: #f0c040;
+}
+
+body.dark-mode footer {
+  background: #000;
+}
+
+/* ---------------- RESPONSIVE-DESIGN ---------------- */
+
+@media (width: 2560px) {
+
+  #darkToggle {
+    margin-bottom: 0px;
+    margin-top: 38px;
+  }
+}
+
+@media (width: 1440px) {
+
+  #darkToggle {
+    margin-bottom: 0px;
+    margin-top: 38px;
+  }
+}
+
+@media (width: 1024px) {
+
+  #darkToggle {
+    margin-bottom: 0px;
+    margin-top: 38px;
+  }
+  .skills-section .card {
+    margin-bottom: 2rem;
+  }
+
+  .skills-section h2 {
+   
+    margin-bottom: 10px;
+    margin-left: 0.5rem;
+  }
+
+}
+
+@media (width: 768px) {
+  #darkToggle {
+    font-size: 12px;
+    margin-top: 0%;
+    margin-right: 7px;
+  }
+  header nav ul {
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    margin-left: 370px;
+  }
+  .logo {
+   margin-bottom: -30px;
+  }
+
+   .skills-section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    margin-left: 0.5rem;
+  }
+
+  .skills-section .card {
+    max-width: 384px;
+    margin-bottom: 2rem;
+  }
+ 
+}
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 20px;
+  }
+  #darkToggle {
+    font-size: 14px;
+    margin: 10px 0 0 0;
+    margin-top: 0%;
+    margin-left: 150px;
+  }
+  .section h2 {
+    font-size: 20px;
+
+  }
+  .card {
+    width: 100%;
+  }
+
+  
+
+}
+
+
+@media screen and (width: 425px) {
+
+  #darkToggle {
+    margin-right: 20px;
+    margin-left: 0%;
+    margin-top: 10px;
+    font-size: 9px;
+  }
+  header nav ul {
+    gap: 1.7rem;
+  }
+
+   .skills-section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    margin-left: 0.5rem;
+  }
+
+  .skills-section .card {
+    flex: 1 1 100px;
+    margin: 5px;
+    margin-bottom: 2rem;
+  }
+  
+}
+
+@media (width: 375px) {
+
+  #darkToggle {
+    margin-right: 7px;
+    margin-left: 240px;
+    margin-top: 10px;
+    font-size: 10px;
+  }
+  header nav ul {
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+ .skills-section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    margin-left: 0.5rem;
+  }
+
+  .skills-section .card {
+    flex: 1 1 100px;
+    margin: 5px;
+    margin-bottom: 2rem;
+  }
+
+  .projects-section h2{
+    font-size: 24px;
+    margin-bottom: 10px;
+    margin-left: 0.5rem;
+  }
+
+    .projects-section .card {
+    flex: 200px;
+    margin: 5px;
+    margin-bottom: 1rem;
+  }
+
+  body {
+  padding-top: 150px; 
+}
+  .site-footer{
+    margin-top: 50px;
+  }
+
+}
+
+@media (width: 320px) {
+  #darkToggle {
+    margin-right: 7px;
+    margin-left: 210px;
+    margin-top: 10px;
+    font-size: 10px;
+  }
+  header nav ul {
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .skills-section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    margin-left: 0.5rem;
+  }
+
+  .skills-section .card {
+    flex: 1 1 100px;
+    margin: 5px;
+    margin-bottom: 2rem;
+  }
+}
+
+
