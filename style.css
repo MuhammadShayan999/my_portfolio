@@ -432,6 +432,13 @@ header nav ul {
   .site-footer{
   margin-top: 50px;
   }
+
+  .contact-section h2{
+    font-size: 30px;
+  }
+  .contact-section p{
+    font-size: 20px;
+  }
 }
 
 /* Medium devices: 425px – 767px (bigger phones + tablets portrait) */
