@@ -515,6 +515,12 @@ header nav ul {
     margin-bottom: 10px;
     margin-left: 0.5rem;
   }
+  .contact-section h1{
+    font-size: 60px;
+  }
+  .contact-section p{
+    font-size: 40px;
+  }
 }
 
 @media (width: 1440px) {
