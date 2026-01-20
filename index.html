@@ -3,65 +3,58 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- SEO Meta Tags -->
-  <meta name="description" content="Muhammad Shayan's Portfolio – Frontend Developer & Student. Showcasing projects, skills, and passion for web development.">
-  <meta name="keywords" content="Muhammad Shayan, Portfolio, Frontend Developer, Web Developer, HTML, CSS, JavaScript, PHP, Student">
-  <!------ SOCIAL SHARING CARD ----->
-  <meta property="og:title" content="Muhammad Shayan | Portfolio">
-  <meta property="og:description" content="Showcasing my projects, skills, and web development journey.">
-  <meta property="og:image" content="your-image-link.jpg">
-  <meta property="og:url" content="https://yourdomain.com">
-  <meta name="twitter:card" content="summary_large_image">
- 
+
+  <!-- SEO -->
+  <meta name="description" content="Muhammad Shayan's Portfolio – Frontend Developer & BSCS Student">
+  <meta name="keywords" content="Muhammad Shayan, Portfolio, Frontend Developer, HTML, CSS, JavaScript">
 
   <title>Muhammad Shayan | Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+  <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Fonts & Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-  <!------------ JAVASCRIPT-EMAILJS INITIALIZATION ------------->
-
-<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-<script>
-  (function(){
-      emailjs.init("LechtbTyWAO0XbIRV"); 
-  })();
-</script>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.ico">
+  
+  <!-- EmailJS -->
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script>
+    (function(){
+      emailjs.init("LechtbTyWAO0XbIRV");
+    })();
+  </script>
 </head>
 
 <body>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 
-  <header>
-    <div class="container">
-      <h1 class="logo">MUHAMMAD SHAYAN</h1>
-      <button id="darkToggle" class="btn btn-secondary">Toggle Dark Mode</button>
-      <nav>
-        <ul class="nav-links" id="nav-links">
-          <li><a href="#" onclick="loadPage('home')">Home</a></li>
-          <li><a href="#" onclick="loadPage('about')">About</a></li>
-          <li><a href="#" onclick="loadPage('projects')">Projects</a></li>
-          <li><a href="#" onclick="loadPage('skills')">Skills</a></li>
-          <li><a href="#" onclick="loadPage('contact')">Contact</a></li>
-        </ul>
-      </nav>
+<header class="shadow-sm">
+  <div class="container d-flex justify-content-between align-items-center py-3">
+    <h1 class="logo mb-0">MUHAMMAD SHAYAN</h1>
 
-      
-    </div>
-  </header>
+    <nav>
+      <ul class="nav nav-pills gap-2">
+        <li class="nav-item"><a class="nav-link" href="#" onclick="loadPage('home')">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#" onclick="loadPage('about')">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#" onclick="loadPage('projects')">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#" onclick="loadPage('skills')">Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="#" onclick="loadPage('contact')">Contact</a></li>
+      </ul>
+    </nav>
 
-  <main id="main-content">
-    
-  </main>
+    <button id="darkToggle" class="btn btn-outline-dark btn-sm">🌙</button>
+  </div>
+</header>
 
-  <footer class="site-footer">
-  <div class="footer-container">
-    <p>&copy; 2025 Muhammad Shayan. All Rights Reserved.</p>
+<main id="main-content" class="container my-5"></main>
+
+<footer class="site-footer mt-5">
+  <div class="container text-center py-4">
+    <p class="mb-2">&copy; 2025 Muhammad Shayan</p>
     <div class="social-icons">
       <a href="https://github.com/MuhammadShayan999" target="_blank"><i class="fab fa-github"></i></a>
       <a href="https://www.linkedin.com/in/muhammad-shayan-52915036a/" target="_blank"><i class="fab fa-linkedin"></i></a>
@@ -70,6 +63,8 @@
   </div>
 </footer>
 
-  <script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
+
