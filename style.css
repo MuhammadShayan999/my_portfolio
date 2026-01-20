@@ -1,53 +1,579 @@
+/* ---------------- RESET ---------------- */
+* {
+  margin-bottom: 0%;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+/* ---------------- BASE STYLES ---------------- */
 body {
-  font-family: 'Roboto', sans-serif;
-  background: #f8f9fa;
-  color: #212529;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+  font-size: larger;
+  padding-top: 100px; /* to prevent content being hidden behind fixed header */
+}
+
+.home-section {
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.container {
+  width: 100%;
+  margin: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* ---------------- HEADER ---------------- */
+header {
+  background: #222;
+  color: #f0c040;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items:center;
+  padding: 20 0px;
+  position:fixed;
+  z-index: 100;
+  top: 0;
+  
+}
+
+header h1{
+  margin: 0%;
 }
 
 .logo {
-  font-weight: 700;
+  font-size: 24px;
+  font-weight: bold;
+  margin-right: auto;
 }
 
-.site-footer {
-  background: #111;
+/* NAVIGATION */
+header nav ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;  /* allows wrapping neatly on very small screens */
+  gap: 2rem; /* space between links */
+  list-style: none;
+  text-decoration: none;
+  margin-bottom: -22px; /* Adjusts the vertical alignment */
+  padding: 0;
+}
+
+header nav li {
+  display: flex;
+  flex-direction: row;
+  margin-top: 22px
+}
+
+header nav a.active {
+  color: #f0c040;
+  border-bottom: 2px solid #f0c040;
+}
+
+header nav a {
   color: #fff;
+  display: flex;
+  flex-direction: row;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
 }
 
-.site-footer a {
+header nav a:hover {
+  color: #f0c040;
+}
+
+#seeworkbutton {
+  font-size: 14px;
+  font-weight: bold;
+  background-color: #f0c040;
+  color: #000;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+#seeworkbutton:hover {
+  background-color: #f0c040;
+}
+
+/* Dark Mode Toggle Button */
+#darkToggle {
+  font-size: 12px;
+  font-weight: bold;
+  background: transparent;
+  border: 2px solid #f0c040;
+  color: #f0c040;
+  border-radius: 4px;
+  padding: 2px 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#darkToggle:hover {
+  background: #f0c040;
+  color: #000;
+  
+}
+
+/* ---------------- HERO ---------------- */
+.hero {
+  background: #444;
+  color: #fff;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.hero span {
+  color: #f0c040;
+}
+
+/* ---------------- SECTION ---------------- */
+.section {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+/* ---------------- PROJECTS ---------------- */
+.projects {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+  /*---------------- CARDS - STYLING ---------------*/
+
+.card-container{
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: center;
+gap: 20px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  width: 280px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* ---------------- SKILLS ---------------- */
+.skills {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.skills li {
+  background: #f0c040;
+  color: #000;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+/* ---------------- CONTACT ---------------- */
+
+form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column; 
+  gap: 15px;
+}
+
+
+form input,
+form textarea {
+  padding: 10px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  resize: vertical;
+}
+
+/* -----------HOVER-EFFECT---------- */
+form input:focus,
+form textarea:focus {
+  border-color: #f0c040;
+  outline: none;
+}
+
+
+form button {
+  cursor: pointer;
+  padding: 10px;
+  background: #f0c040;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+form button:hover {
+  background: #e0b030;
+}
+
+/* ---------------- FOOTER ---------------- */
+footer {
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 20px 10px;
+  font-family: 'Roboto', sans-serif;
+  transform: translate(0px, 250px);
+}
+
+.footer-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.footer-container p {
+  margin-bottom: 10px;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.social-icons a {
   color: #fff;
   margin: 0 10px;
-  font-size: 1.2rem;
+  font-size: 20px;
+  transition: color 0.3s ease;
 }
 
-.skill-box {
-  padding: 15px;
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,.08);
-  font-weight: 600;
+.social-icons a:hover {
+  color: #f0c040;
 }
 
-.dark-mode {
-  background: #121212;
-  color: #eee;
+/* ---------------- DARK MODE ---------------- */
+body.dark-mode {
+  background-color: #111;
+  color: #ddd;
 }
 
-.dark-mode .card,
-.dark-mode .skill-box {
-  background: #1e1e1e;
-  color: #fff;
+body.dark-mode header {
+  background: #000;
 }
 
-.reveal {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all 0.8s ease;
+body.dark-mode .hero {
+  background: #222;
+  color: #f0c040;
 }
 
-.reveal.active {
-  opacity: 1;
-  transform: translateY(0);
+body.dark-mode .card {
+  background: #1a1a1a;
+  color: #f0c040;
+  border: 1px solid #333;
 }
 
+body.dark-mode .btn {
+  background-color: #444;
+  color: #f0c040;
+}
+
+body.dark-mode footer {
+  background: #000;
+}
+
+/* ---------------- RESPONSIVE-DESIGN ---------------- */
+
+
+/* Tiny phones: 320px – 374px */
+@media (min-width: 320px) and (max-width: 374px) {
+  #darkToggle {
+    margin-right: 7px;
+    margin-left: 210px;
+    margin-top: 10px;
+    font-size: 10px;
+  }
+  header nav ul {
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  
+  .skills-section h2 {
+    font-size: 35px;
+    text-align: center;      /* <------- SKILLS-SECTION */
+    margin-bottom: 10px;
+    margin-left: 0.5rem;
+  }
+
+  .skills-section .card {
+    flex: 1 1 100px;
+    margin: 5px;
+    margin-bottom: 2rem;
+  }
+
+  /* Body */
+  body {
+  padding-top: 160px; 
+  }
+  .site-footer{
+    margin-top: 60px;
+  }
+
+ 
+  .about-section h2 {
+    font-size: 35px;
+    transform: translate(0px, 30px);    /* <----- ABOUT-SECTION */
+    text-align: center;
+  }
+  .about-section p {
+  transform: translate(5px, 40px);
+  }
+
+   .projects-section h2{
+    font-size: 35px;           /* <------- PROJECTS-SECTION */
+    text-align: center;
+  }
+
+  .contact-section h2 {
+    font-size: 35px;
+    transform: translate(0px, 30px);    /* <----- CONTACT-SECTION */
+    text-align: center;
+  }
+  .contact-section p {
+  transform: translate(5px, 40px);
+  text-align: center;
+  }
+
+  #contact-form{
+    flex: 1 1 100px;
+    margin: 5px;
+    margin-bottom: 2rem;
+
+  }
+}
+
+/* Small phones: 375px – 424px */
+@media (min-width: 375px) and (max-width: 424px) {
+header nav ul {
+  flex-direction: row;
+  align-items: center;
+  gap: 1.5rem;
+  }
+  h1 { font-size: 24px; }
+
+   .skills-section h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  margin-left: 0.5rem;
+  }
+
+  #darkToggle {
+  margin-right: 7px;
+  margin-left: 240px;
+  margin-top: 10px;
+  font-size: 10px;
+  }
+
+  .skills-section .card {
+    flex: 1 1 100px;
+    margin: 5px;
+    margin-bottom: 2rem;
+  }
+
+  .projects-section h2{
+  font-size: 24px;
+  margin-bottom: 10px;
+  margin-left: 0.5rem;
+  }
+
+  .projects-section .card {
+  flex: 200px;
+  margin: 5px;
+  margin-bottom: 1rem;
+  }
+
+  body {
+  padding-top: 150px; 
+  }
+  .site-footer{
+  margin-top: 50px;
+  }
+
+  .contact-section h2{
+    font-size: 44px;
+  }
+  .contact-section p{
+    font-size: 0.8rem;
+  }
+}
+
+/* Medium devices: 425px – 767px (bigger phones + tablets portrait) */
+@media (min-width: 425px) and (max-width: 767px) {
+  
+  h1 { font-size: 28px; }
+  .btn { font-size: 15px; }
+
+  #darkToggle {
+    margin-right: 20px;
+    margin-left: 0%;
+    margin-top: 10px;
+    font-size: 9px;
+  }
+  header nav ul {
+    gap: 1.7rem;
+  }
+
+   .skills-section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    margin-left: 0.5rem;
+  }
+
+  .skills-section .card {
+    flex: 1 1 100px;
+    margin: 5px;
+    margin-bottom: 2rem;
+  }
+
+  .contact-section h2{
+    font-size: 52px;
+  }
+  .contact-section p{
+    font-size: 35px;
+  }
+
+}
+
+/* Tablets landscape & small laptops: 768px – 1023px */
+@media (min-width: 768px) and (max-width: 1023px) {
+  h1 { font-size: 32px; }
+
+  .btn { font-size: 16px; }
+  #darkToggle {
+    font-size: 12px;
+    margin-top: 0%;
+    margin-right: 7px;
+  }
+  header nav ul {
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    margin-left: 370px;
+  }
+  .logo {
+    margin-bottom: -30px;
+  }
+
+   .skills-section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    margin-left: 0.5rem;
+  }
+
+  .skills-section .card {
+    max-width: 384px;
+    margin-bottom: 2rem;
+  }
+  .contact-section h2{
+    font-size: 60px;
+  }
+  .contact-section p{
+    font-size: 40px;
+  }
+  
+}
+
+/* Large laptops/desktops: 1024px – 1439px */
+@media (min-width: 1024px) and (max-width: 1439px) {
+  
+  h1 { font-size: 36px; }
+  .btn { font-size: 17px; padding: 12px 20px; }
+ 
+  #darkToggle {
+    margin-bottom: 0px;
+    margin-top: 38px;
+  }
+  .skills-section .card {
+    margin-bottom: 2rem;
+  }
+
+  .skills-section h2 {
+   
+    margin-bottom: 10px;
+    margin-left: 0.5rem;
+  }
+  .contact-section h2{
+    font-size: 60px;
+  }
+  .contact-section p{
+    font-size: 40px;
+  }
+}
+
+@media (width: 1440px) {
+
+  #darkToggle {
+    margin-bottom: 0px;
+    margin-top: 38px;
+  }
+  .contact-section h2{
+    font-size: 65px;
+  }
+  .contact-section p{
+    font-size: 45px;
+  }
+}
+
+/* Extra large screens: 1441px and up */
+@media (min-width: 1441px) {
+  body { max-width: 1400px; margin: 0 auto; } /* center content */
+  h1 { font-size: 40px; }
+  
+  #darkToggle {
+    margin-bottom: 0px;
+    margin-top: 38px;
+  }
+
+  .contact-section h2{
+    font-size: 70px;
+  }
+  .contact-section p{
+    font-size: 50px;
+  }
+}
 
 
