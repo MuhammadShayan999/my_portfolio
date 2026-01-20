@@ -1,47 +1,61 @@
-// DARK MODE
-document.getElementById("darkToggle").addEventListener("click", () => {
+// ================= DARK MODE =================
+document.getElementById("darkToggle").addEventListener("click", function () {
   document.body.classList.toggle("dark-mode");
 });
 
-// LOAD SECTIONS
+// ================= LOAD SECTIONS DYNAMICALLY =================
 function loadPage(section) {
   fetch(`${section}.html`)
-    .then(res => res.text())
+    .then(response => {
+      if (!response.ok) throw new Error("Page not found.");
+      return response.text();
+    })
     .then(data => {
       document.getElementById("main-content").innerHTML = data;
-      if (section === "contact") initContactForm();
+
+      // Re-init EmailJS form if contact page loads
+      if (section === "contact") {
+        initContactForm();
+      }
     })
-    .catch(() => {
-      document.getElementById("main-content").innerHTML = "<p>Page not found</p>";
+    .catch(error => {
+      document.getElementById("main-content").innerHTML = `<p>${error}</p>`;
     });
 }
 
-// EMAILJS
+// ================= NAVIGATION ACTIVE CLASS =================
+const navLinks = document.querySelectorAll("header nav a");
+
+navLinks.forEach(link => {
+  link.addEventListener("click", () => {
+    // remove active from all
+    navLinks.forEach(l => l.classList.remove("active"));
+    // add active to clicked
+    link.classList.add("active");
+  });
+});
+
+// ================= EMAILJS CONTACT FORM =================
 function initContactForm() {
   const form = document.getElementById("contact-form");
-  if (!form) return;
+  if (form) {
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
 
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
-    emailjs.sendForm("service_mbdh8qm", "template_oxztfnl", form)
-      .then(() => {
-        alert("Message sent successfully!");
-        form.reset();
-      })
-      .catch(() => alert("Failed to send message"));
-  });
-}
-function revealOnScroll() {
-  document.querySelectorAll('.reveal').forEach(el => {
-    const windowHeight = window.innerHeight;
-    const elementTop = el.getBoundingClientRect().top;
-
-    if (elementTop < windowHeight - 100) {
-      el.classList.add('active');
-    }
-  });
+      emailjs.sendForm("service_mbdh8qm", "template_oxztfnl", form)
+        .then(() => {
+          alert("✅ Message sent successfully!");
+          form.reset();
+        })
+        .catch((error) => {
+          alert("❌ Failed to send message. Try again later.");
+          console.error("EmailJS Error:", error);
+        });
+    });
+  }
 }
 
-window.addEventListener('scroll', revealOnScroll);
-window.onload = () => loadPage("home");
-
+// ================= DEFAULT LOAD =================
+window.onload = function () {
+  loadPage("home");
+};
