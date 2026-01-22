@@ -122,6 +122,11 @@ header nav a:hover {
   padding: 6px 12px;
 }
 
+#cvbutton:hover {
+  color: #000;
+  background-color: #f0c040;
+}
+
 
 /* Dark Mode Toggle Button */
 #darkToggle {
