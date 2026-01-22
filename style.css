@@ -115,6 +115,7 @@ header nav a:hover {
 
     /* CV BUTTON */
 #cvbutton{
+  background-color: transparent;
   font-weight: bold;
   border: 2px solid #f0c040;
   border-radius: 4px;
