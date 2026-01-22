@@ -112,6 +112,15 @@ header nav a:hover {
   background-color: #f0c040;
 }
 
+    /* CV BUTTON */
+#cvbutton{
+  font-weight: bold;
+  border: 2px solid #f0c040;
+  border-radius: 4px;
+  padding: 6px 12px;
+}
+
+
 /* Dark Mode Toggle Button */
 #darkToggle {
   font-size: 12px;
