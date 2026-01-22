@@ -99,9 +99,7 @@ header nav a:hover {
 }
 
 #seeworkbutton{
-  font-size: 14px;
   font-weight: bold;
-  color: #000;
   background-color: transparent;
   border: 2px solid #f0c040;
   border-radius: 4px;
