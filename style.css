@@ -95,14 +95,14 @@ header nav a {
 
 header nav a:hover {
   color: #f0c040;
-  border-bottom: 2px solid #f0c040 0.3s ease;
+  border-bottom: 2px solid #f0c040;
 }
 
 #seeworkbutton{
   font-size: 14px;
   font-weight: bold;
   color: #000;
-  border: none;
+  border: 2px solid #f0c040;
   border-radius: 4px;
   padding: 6px 12px;
   cursor: pointer;
