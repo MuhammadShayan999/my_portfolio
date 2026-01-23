@@ -95,7 +95,8 @@ header nav a {
 
 header nav a:hover {
   color: #f0c040;
-  border-bottom: 2px solid #f0c040 1s ease;
+  border-bottom: 2px solid #f0c040;
+  transition: border-bottom 2s ease;
   
 }
 
